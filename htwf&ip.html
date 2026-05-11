@@ -1,0 +1,149 @@
+<html>
+	<head><title>How to win friends and influence people</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align: center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+		.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">HOW TO WIN FRIENDS AND INFLUENCE PEOPLE</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html" class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book21.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>How To Win Friends And Influence People (Dale Carnegie Books)</h2>
+		<h4>By Dale Carnegie(Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;176</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button> &nbsp;&nbsp;
+		 												
+		<h5>M.R.P.:<strike>&#8377;119</strike>&nbsp;&nbsp;Inclusive of all taxes</h5>
+		
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.7/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Winning friends in the competitive world of today is one of life's biggest challenges. In fact it is an art. How to Win Friends and Influence People explains that nowadays people select friends and one should have distinguished qualities to make someone want to befriend you. It sounds quite materialistic but it is visible everywhere and in every walk of life. Influencing someone through one's personality is one of the mechanisms of gaining friends. This needs to be inculcated and practised. This book provides the basic skills through which one can attract people and capture their goodwill and attention.
+
+The book highlights human psychology and reveals to the reader the ways to connect with other auras of human existence and hence influence one another gradually. The success of a person definitely comes from wealth but a majority of it depends on how expressive a person is and how impressive he or she is. The book says that an impression is created only when a person makes others feel important or elevates them to a pedestal of significance. This is an art because at no point should the other person feel like you are manipulating him or her.
+
+How to Win Friends and Influence People was published in 1998 by Gallery Books. This reprint edition is available in paperback.</p><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•Around 15 million copies of the book have been sold.<br><br></b></p>
+	</body>
+</html>

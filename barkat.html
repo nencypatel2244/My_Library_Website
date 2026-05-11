@@ -1,0 +1,146 @@
+<html>
+	<head><title>Barkat</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align: center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+		.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">BARKAT</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html" class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book30.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>Barkat: The Inspiration and the Story Be: The Inspiration and the Story Behind One of World’s Largest Food Drives FEED INDIA Hardcover </h2>
+		<h4>By  Vikas Khanna(Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;429</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button>&nbsp;&nbsp;
+															
+		<h5>M.R.P.:<strike>&#8377;499</strike>&nbsp;&nbsp;Inclusive of all taxes</h5>
+		
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.7/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Barkat' means abundance. An abundance of blessings and auspiciousness. Where there is no dearth and there is no scarcity, that's Barkat. It's a much bigger word than can be translated in English.
+This is the story of one of the most beloved chefs from India, Vikas Khanna. From the small town of Amritsar, he grew to be an international chef and fulfilled his dream of getting a Michelin Star. He narrates how his grandmother infused in him the values of sharing food, while the langars of the Golden Temple showed him that community kitchens are perhaps the only way to ensure no one goes hungry.
+From these values developed around food, he got the goal and the grit to build one of the world's largest food drives called 'Feed India' during the COVID-19 lockdown.
+This deeply personal and heart-touching narrative is a testimony of one man's vision to showcase Indian culture and the intrinsic value of sharing food to the world.</p></b></p>
+	</body>
+</html>

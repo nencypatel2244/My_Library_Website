@@ -1,0 +1,148 @@
+<html>
+	<head><title>ikigai</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align:center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+		.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">IKIGAI</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html"  class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book12.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>Ikigai: The Japanese secret to a long and happy life</h2>
+		<h4>By Héctor García (Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;336</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button> &nbsp;&nbsp;
+															
+		<h5>M.R.P.:<strike>&#8377;433.12</strike>&nbsp;&nbsp;Inclusive of all taxes</h5>
+		
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.7/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We all have an ikigai. It's the Japanese word for 'a reason to live' or 'a reason to jump out of bed in the morning'. The place where your needs, ambitions, skills and satisfaction meet. A place of balance.
+
+This book will help you unlock what your ikigai is and equip you to change your life. There is a passion inside you - a unique talent that gives you purpose and makes you the perfect candidate for something. All you have to do is discover and live it.</p><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•Do that, and you can make every single day of your life joyful and meaningful.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•'A refreshingly simple recipe for happiness' Stylist.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•'Ikigai gently unlocks simple secrets we can all use to live long, meaningful, happy lives' Neil Pasricha, bestselling author of The Happiness Equation.<br></b></p>
+	</body>
+</html>

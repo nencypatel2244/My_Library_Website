@@ -1,0 +1,149 @@
+<html>
+	<head><title>games of thrones</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align:center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+		.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">GAMES OF THRONES</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html" class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book11.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>Game of Thrones: The bestselling classic epic fantasy series behind the award-winning HBO and Sky TV show and phenomenon</h2>
+		<h4>By George R. R. Martin (Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;247</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button> &nbsp;&nbsp;
+			
+		<h5>M.R.P.:<strike>&#8377;354.96</strike>&nbsp;&nbsp;Inclusive of all taxes</h5>
+		
+	
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.6/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HBO’s hit series A GAME OF THRONES is based on George R. R. Martin’s internationally bestselling series A SONG OF ICE AND FIRE, the greatest fantasy epic of the modern age. A GAME OF THRONES is the first volume in the series.
+
+Summers span decades. Winter can last a lifetime. And the struggle for the Iron Throne has begun.
+
+As Warden of the north, Lord Eddard Stark counts it a curse when King Robert bestows on him the office of the Hand. His honour weighs him down at court where a true man does what he will, not what he must … and a dead enemy is a thing of beauty.
+
+The old gods have no power in the south, Stark’s family is split and there is treachery at court. Worse, the vengeance-mad heir of the deposed Dragon King has grown to maturity in exile in the Free Cities. He claims the Iron Throne.</p></b></p>
+	</body>
+</html>

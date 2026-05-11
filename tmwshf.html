@@ -1,0 +1,143 @@
+<html>
+	<head><title>The Monk Who Sold His Ferrari</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align: center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+		.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">THE MONK WHO SOLD HIS FERRARI</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html" class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book36.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>The Monk Who Sold His Ferrari Paperback</h2>
+		<h4>By Dale Carnegie(Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;219</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button> &nbsp;&nbsp;
+	
+		<h5>M.R.P.:<strike>&#8377;299</strike>&nbsp;&nbsp;Inclusive of all taxes</h5>
+		
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.5/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A renowned inspirational fiction, The Monk Who Sold His Ferrari is a revealing story that offers the readers a simple yet profound way to live life. The plot of this story revolves around Julian Mantle, a lawyer who has made his fortune and name in the profession. A sudden heart-attack creates havoc in the successful lawyer?s life. Jolted by the sudden onset of the illness, his practice comes to a standstill. He ponders over material success being worth it all, renounces all of it and leaves for India. A visit to India about a spiritual awakening that opens up new vistas and Julian begins to view life in a different perspective. He decides to live his life once again but in a way that is much more fulfilling and meaningful than before. In the book, the reader goes through a spiritual journey and into a very old culture that has gathered much wisdom over the millennia. The book advocates about how to live happily, think deep and rightly, value time and relationships, be more disciplined, follow the heart?s call and live every moment of the life. Written in simple words, the book has turned out to be a bestseller and is more than just an endearing story. Through storytelling, Robin Sharma showcases the miracles and wonders of living a fulfilling life. In the process, the book introduces readers to enlightening yet simple principles that vouch to make life better, happier and more meaningful. A bestselling novel, what readers all over the globe appreciate about this book is its deft amalgam of the philosophies from both western and eastern worlds. The book has been followed by important personalities around the world. About the Author Robin Sharma, the bestselling author of 'The Monk Who Sold His Ferrari', first published in 1999, is an International Leadership Professional Guru who is credited with having written 15 books on leadership. He has been guiding people to live a better life, by drawing inspiration from his own life experiences. The Leader Who Had No Title, The Leader Who Had No Title, The Greatness Guide and The Saint and The Saint are among his best books. He heads the Sharma Leadership International Inc, a firm that trains people in leadership. A former litigation lawyer, Robin holds a law degree from Dalhousie Law School, Canada. This book along with The Greatness Guide has been among the world?s bestsellers and has been translated in as many as 70 languages all over the world.</p></b></p>
+	</body>
+</html>

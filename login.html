@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+		.h2{
+			position: absolute;
+			top: 10px; 
+			left: 10px;
+		}
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #04aa6d;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .ok {
+        text-align: left; /* Align to the left */
+        margin-top: 20px; /* Space below the login form */
+    }
+
+    .ok a {
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: #333;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+    }
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        .wrapper {
+            position: relative;
+            background: #fff;
+            max-width: 480px;
+            width: 100%;
+            padding: 35px 40px;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #4070F4;
+            padding: 0 35px;
+        }
+        .input-box {
+            position: relative;
+            height: 65px;
+            margin: 25px 0;
+        }
+        .input-box input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #333;
+            font-size: 18px;
+            padding: 0 40px 0 16px;
+            border: 2px solid lightgrey;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .input-box input:focus {
+            border-color: #4070F4;
+        }
+        .input-box label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #a6a6a6;
+            background: #fff;
+            padding: 0 6px;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .input-box input:focus ~ label,
+        .input-box input:valid ~ label {
+            top: 0;
+            font-size: 14px;
+            color: #4070F4;
+        }
+        .input-box.button input {
+            border: none;
+            font-size: 20px;
+            color: #fff;
+            letter-spacing: 1px;
+            background: #4070F4;
+            cursor: pointer;
+        }
+        .input-box.button input:hover {
+            background: #265df2;
+        }
+		.video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevents form submission before validation
+            
+            var username = document.forms["loginForm"]["uname"].value;
+            var password = document.getElementById("create_pw").value;
+            var email = document.forms["loginForm"]["email"].value;
+
+            // Email Validation
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (username === "" || password === "" || email === "") {
+                alert("Please fill out all fields before logging in.");
+                return false;
+            } else if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address (example: user@gmail.com)");
+                return false;
+            } else {
+                // Redirect only if everything is correct
+                window.location.href = "library.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 class="h2">Login Form</h2>
+	
+	 <div class="video-container">
+        <video autoplay muted loop>
+            <source src="libvideo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+	
+    <div class="wrapper">
+        <form name="loginForm" onsubmit="validateForm(event)">
+            <div class="input-box">
+                <input type="text" name="uname" required>
+                <label for="uname">Enter Username</label>
+            </div>
+
+            <div class="input-box">
+                <input id="create_pw" type="password" required>
+                <label>Create password</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="email" required>
+                <label for="email">Enter Email</label>
+            </div>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+
+            <div class="input-box button">
+                <input id="button" type="submit" value="Login">
+            </div>
+        </form>
+   
+    <div class="ok"><a href="library.html">Back to the Home Page</a></div>
+	 </div>
+</body>
+</html>

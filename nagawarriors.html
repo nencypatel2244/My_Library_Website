@@ -1,0 +1,146 @@
+<html>
+	<head><title>The Naga Warriors</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align: center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+			.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">THE NAGA WARRIORS</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html" class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book22.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>The Naga Warriors 1: Battle of Gokul Vol 1 | From the bestselling author of Hidden Hindu Trilogy, Akshat Gupta [Paperback] Gupta, Akshat Paperback</h2>
+		<h4>By Akshat Gupta (Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;163</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button> &nbsp;&nbsp;
+	
+		<h5>M.R.P.:<strike>&#8377;250</strike>&nbsp;&nbsp;Inclusive of all taxes</h5>
+	
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.6/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To prepare for the future, our ancestors created the Naga sadhus--a clan of warriors for the protection of Dharma, as proclaimed by Adi Guru Shankaracharya in the eighth century. This sect of Shiva devotees has stood firm, living selflessly and fighting fearlessly. For centuries, they have died the death of heroes, serving and saving Dharma and the temples.
+
+In the year 1757, 111 Naga sadhus borrowed the majestic weapons of the idols of their gods. Fueled by their belief in Lord Shiva, they gathered an invincible courage to protect the temples of Gokul. They stood as an indestructible wall, led by Ajaa, a fearless Naga warrior, against the Afghan army of 4000 men, a cavalry of 200 horses and 100 camels, and 20 cannons. The brutal Afghan army was led by Sardar Khan, the most ruthless commander of Emperor Ahmed Shah Abdali, ill-famed for the demolition of temples and building a history of genocide in Bharat.
+
+The fight continues. This is the Naga warrior's commitment to courage and determination. This is the clash of Shiva devotees against the devils that lie under men's skin. This is the Battle of Gokul.</p><br><br></p>
+	</body>
+</html>

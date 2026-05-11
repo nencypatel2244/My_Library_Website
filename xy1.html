@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .Nav {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.nav-item {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures the dropdown appears directly below */
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 200px;
+}
+
+.dropdown li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            var username = document.forms["loginForm"]["uname"].value;
+            var password = document.getElementById("create_pw").value;
+            var email = document.forms["loginForm"]["email"].value;
+
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (username === "" || password === "" || email === "") {
+                alert("Please fill out all fields before logging in.");
+                return false;
+            } else if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address (example: user@gmail.com)");
+                return false;
+            } else {
+                window.location.href = "library.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="libvideo.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Login Form -->
+    <div class="wrapper">
+        <h2>Login Form</h2>
+        <form name="loginForm" onsubmit="validateForm(event)">
+            <div class="input-box">
+                <input type="text" name="uname" required>
+                <label for="uname">Enter Username</label>
+            </div>
+
+            <div class="input-box">
+                <input id="create_pw" type="password" required>
+                <label>Create password</label>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="email" required>
+                <label for="email">Enter Email</label>
+            </div>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+
+            <div class="input-box button">
+                <input id="button" type="submit" value="Login">
+            </div>
+        </form>
+   
+        <div class="ok"><a href="library.html">Back to the Home Page</a></div>
+    </div>
+</body>
+</html>
+

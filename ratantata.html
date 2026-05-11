@@ -1,0 +1,164 @@
+<html>
+	<head><title>Ratan Tata</title>
+	<style>
+		.h11
+		{
+			font-family: Open Sans Semibold;
+			background-color:#ff6607;
+			text-align: center;
+		}
+		.nav
+		{
+			display:flex;
+			justify-content: space-around;
+			transition: 0.3 ease;
+            font-size: 15px;
+			cursor: pointer;
+		}
+		.nav b
+		{
+			color: white;
+			background-color: #111111;
+			padding: 3px;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+		.now
+		{
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+ 
+		.star {
+		  font-size: 4vh;
+		  cursor: pointer;
+		}
+		 
+		.one {
+		  color: rgb(255, 0, 0);
+		}
+		 
+		.two {
+		  color: rgb(255, 106, 0);
+		}
+		 
+		.three {
+		  color: rgb(251, 255, 120);
+		}
+		 
+		.four {
+		  color: rgb(255, 255, 0);
+		}
+		 
+		.five {
+		  color: rgb(24, 159, 14);
+		}
+		.Back
+		{
+			text-decoration:none;
+			color:#407726;
+		}
+		.ohh{
+			position: relative;
+			display: flex;
+			align-item: center;
+			justify-content: center;
+			width: 100px;
+			height: 20px;
+			background: blue;
+			border-radius: 0 15px 15px 15px;
+			color: white;
+		}
+	</style>
+	<script>
+			let stars =  document.getElementsByClassName("star");
+		let output = document.getElementById("output");
+		 
+		// Funtion to update rating
+		function gfg(n) {
+			remove();
+			for (let i = 0; i < n; i++) {
+				if (n == 1) cls = "one";
+				else if (n == 2) cls = "two";
+				else if (n == 3) cls = "three";
+				else if (n == 4) cls = "four";
+				else if (n == 5) cls = "five";
+				stars[i].className = "star " + cls;
+			}
+			output.innerText = "Rating: " + n + "/5";
+		}
+		 
+		// To remove the pre-applied styling
+		function remove() {
+			let i = 0;
+			while (i < 5) {
+				stars[i].className = "star";
+				i++;
+			}
+		}
+	</script>
+	</head>
+	<body>
+	<hr size="5" width="100%" color="black">
+	<h1 class="h11">RATAN TATA</h1>
+	<hr size="5" width="100%" color="black">
+	<a href="library.html" class="Back">BACK TO HOME PAGE...</a><br><br>
+	&nbsp;&nbsp;&nbsp;<img height="300" width="200" src="book28.jpg" style="float:left; margin-right: 20px; margin-bottom: 30px;">
+	
+	<h2>Ratan Tata : A Life Hardcover </h2>
+		<h4>By Thomas Mathew(Author)</h4>
+		
+		<span style='font-size:25px;'>&#8377;899</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<button class="now">Buy Now</button> &nbsp;&nbsp;
+		
+		<h5>M.R.P.:<strike>&#8377;1499</strike><div class="ohh">#1 Best Seller</div>&nbsp;&nbsp;Inclusive of all taxes</h5>
+	
+		<div class="card">
+        <span onclick="gfg(1)"
+              class="star">★
+        </span>
+        <span onclick="gfg(2)"
+              class="star">★
+        </span>
+        <span onclick="gfg(3)"
+              class="star">★
+        </span>
+        <span onclick="gfg(4)"
+              class="star">★
+        </span>
+        <span onclick="gfg(5)"
+              class="star">★
+        </span>
+        <h3 id="output">
+              Rating: 4.6/5
+          </h3>
+    </div>
+	
+	<div class="nav">
+	<div class="nav"><b>Free Delivery</b></div>
+	<div class="nav"><b>7 Days Replacement</b></div>
+	<div class="nav"><b>Cash/Pay on Delivery</b></div>
+	<div class="nav"><b>Secure Transaction</b></div></div>
+	
+	<p><b><h3>Summary:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To create an Indian environment with fresh air to breathe, clean water to drink, nutritious food with no one left hungry, and a way to care for everyone’s health should be the priority for you and me.—Ratan Tata<br><br>
+
+Ratan Tata (1937–2024) was one of the most influential and inspirational personalities of our times—an iconic business leader who was instrumental in transforming independent India’s industrial landscape.<br><br>
+
+Established in 1868, the Tata Group spans a gamut of industries, from salt to steel to software, and is synonymous with quality and trust. It operates in more than 100 countries, impacting the lives of billions of people around the world. The abiding goodwill and respect that the Tata brand carries today can be traced back largely to the vision and integrity of one individual who spearheaded the conglomerate for over two decades—Ratan Tata.<br><br>
+
+Starting out as a novice on the shop floor of a Tata company, Ratan Tata achieved an unequalled growth rate for the Tata Group as chairman and took India to the world through global acquisitions, overcoming many serious challenges along the way.<br><br>
+
+This fascinating biography traces Ratan Tata’s years in immaculate detail, from his lonely childhood to his irrepressible youthful exuberance, from his first major job in the conglomerate to being appointed chairman of Tata Sons in 1991 to his role as the head of Tata Trusts, India’s largest philanthropic enterprise. It is as much a story of determination and an unwavering commitment to enduring principles and values as it is a testament to achieving unprecedented corporate success.<br><br>
+
+Drawing on hundreds of hours of interviews with Ratan Tata, his family, friends, former colleagues and business associates, and filled with previously unknown facts, anecdotes and the author’s insights, this is a comprehensive account of a life the likes of which the world has seldom seen</p></b></p>
+	</body>
+</html>
